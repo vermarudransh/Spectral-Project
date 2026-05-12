@@ -51,41 +51,30 @@ Black pixels generate a sine tone at their mapped frequency and time. White pixe
 spectral-steganography/
 │
 ├── backend/
-│   ├── crypto.py          # Stage 1 — AES-256-GCM encryption & decryption
-│   ├── steganography.py   # Stage 2 & 3 — QR synthesis + spectral audio embedding
-│   ├── server.py          # Flask REST API (bridges frontend ↔ Python pipeline)
+│   ├── __pycache__/
+│   ├── crypto.py            # AES-256-GCM encryption & decryption
+│   ├── steganography.py     # QR synthesis + spectral audio embedding
+│   ├── server.py            # Flask REST API
 │   └── requirements.txt
 │
-├── src/
-│   ├── main.jsx
-│   ├── App.jsx
-│   ├── styles/
-│   │   └── globals.css
-│   ├── utils/
-│   │   ├── api.js          # Flask client
-│   │   ├── crypto.js       # RSA keygen, codename generator (Web Crypto API)
-│   │   ├── peerRegistry.js # In-memory peer store
-│   │   └── time.js
-│   ├── hooks/
-│   │   ├── useActivityLog.js
-│   │   └── usePipeline.js
-│   ├── context/
-│   │   └── AppContext.jsx
-│   └── components/
-│       ├── BootScreen/
-│       ├── IdentityScreen/
-│       ├── Dashboard/
-│       ├── TopBar/
-│       ├── PeerPanel/
-│       ├── ComposePanel/
-│       ├── WaveformDisplay/
-│       ├── ActivityLog/
-│       └── StatusBar/
-│
-├── SpectralChat.jsx       # Standalone single-file React chatbot
-├── package.json
-├── vite.config.js
-└── index.html
+├── frontend/
+│   ├── node_modules/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── SpectralChat.jsx
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── index.css
+│   │   └── main.jsx
+│   │
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── vite.config.js
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── .gitignore
+│   └── README.md
 ```
 
 ---
